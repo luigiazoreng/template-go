@@ -1,0 +1,132 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "API template",
+        "title": "Template-Go Microservice",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/product": {
+            "get": {
+                "description": "This endpoint is used to...",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Get Product",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/types.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Unauthorized, check HTTP Authorization header"
+                    }
+                }
+            },
+            "post": {
+                "description": "this endpoint is used for...",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Post Product",
+                "parameters": [
+                    {
+                        "description": "Provide product details in the request body",
+                        "name": "product",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/types.Product_POST_Body"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/types.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Unauthorized, check HTTP Authorization header"
+                    }
+                }
+            },
+            "delete": {
+                "description": "This endpoint is used to delete product",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Delete Product",
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/types.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Unauthorized, check HTTP Authorization header"
+                    }
+                }
+            },
+            "patch": {
+                "description": "this endpoint is used for...",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Product"
+                ],
+                "summary": "Patch Product",
+                "parameters": [
+                    {
+                        "description": "Provide product details in the request body",
+                        "name": "product",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/types.Product_PATCH_Body"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/types.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Unauthorized, check HTTP Authorization header"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "types.Product_PATCH_Body": {
+            "type": "object"
+        },
+        "types.Product_POST_Body": {
+            "type": "object"
+        },
+        "types.Response": {
+            "type": "object"
+        }
+    }
+}
